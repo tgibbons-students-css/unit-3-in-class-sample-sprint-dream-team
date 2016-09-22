@@ -250,6 +250,8 @@ namespace Sermo.UnitTests
         [TestCase("Callooh! Callay! O frabjous day!")]
         [TestCase("The frumious Bandersnatch!")]
         [TestCase("A hefferlump or woozle is very confusel...")]
+
+        // Changes Sprint 2 --  “I want to filter message content so that it is appropriate.” -- Tommy Traaholt
         public void PostAddMessageWithBlacklistedWordsCausesValidationError(string text)
         {
             var controller = CreateController();
