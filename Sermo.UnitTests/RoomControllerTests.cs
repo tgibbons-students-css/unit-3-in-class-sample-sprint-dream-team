@@ -23,6 +23,7 @@ namespace Sermo.UnitTests
         public void ConstructingWithoutReaderThrowsArgumentNullException()
         {
             Assert.Throws<ArgumentNullException>(() => new RoomController(null, mockWriter.Object));
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Abby Panfil
         }
 
         [Test]
@@ -45,6 +46,7 @@ namespace Sermo.UnitTests
             var result = controller.Create();
 
             Assert.That(result, Is.InstanceOf<ViewResult>());
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Abby Panfil
         }
 
         [Test]
@@ -73,6 +75,7 @@ namespace Sermo.UnitTests
             var isValid = Validator.TryValidateObject(viewModel, context, results);
 
             Assert.That(isValid, Is.False);
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Abby Panfil
         }
 
         [Test]
